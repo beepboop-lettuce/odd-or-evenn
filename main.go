@@ -10,7 +10,7 @@ func main() {
 
 	fmt.Println("Enter a numbere to play the game!")
 
-	if os.Args != 2 {
+	if len(os.Args) != 2 {
 		fmt.Println("Please enter a number")
 		return
 	}
