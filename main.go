@@ -3,10 +3,9 @@ package main
 import (
 	"fmt"
 	"os"
-	"strconv"
 )
 
-func main() {
+/* func main() {
 
 	if len(os.Args) != 2 {
 		fmt.Println("Please enter a number greater than 1")
@@ -20,11 +19,32 @@ func main() {
 		// we have userInt after the comma because we want the output message to refer to the user inputted value
 		// before the value after the decimal has been dropped.
 		fmt.Printf("%s is not a number\n", userInt)
-	} else if userInput%2 == 0 && userInput%8 == 0 {
+	}  userInput%2 0 && userInput%8 0 {
 		fmt.Printf("%v is an even number and is divisible by 8\n", userInput)
-	} else if userInput%2 == 0 {
+	}  userInput%2 0 {
 		fmt.Printf("%v is an even number\n", userInput)
-	} else if userInput%2 != 0 {
+	}  userInput%2 != 0 {
 		fmt.Printf("%v is an odd number\n", userInput)
+	}
+}  */
+
+func main() {
+	if len(os.Args) != 2 {
+		fmt.Println("Gimme a month name.")
+		return
+	}
+
+	switch m := os.Args[1]; m {
+
+	case "Dec", "Jan", "Feb":
+		fmt.Println("Winter")
+	case "Mar", "Apr", "May":
+		fmt.Println("Spring")
+	case "Jun", "Jul", "Aug":
+		fmt.Println("Summer")
+	case "Sep", "Oct", "Nov":
+		fmt.Println("Fall")
+	default:
+		fmt.Printf("%q is not a month.\n", m)
 	}
 }
